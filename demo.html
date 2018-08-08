@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-style: preserve-3d;
+        width: 250px;
+        height: 350px;
+        animation: rotate 5s ease infinite;
+    }
+
+    .wrapper div {
+        position: absolute;
+        top: 0;
+        width: 350px;
+        height: 350px;
+        opacity: 0.8;
+    }
+
+    .wrapper div img {
+        /* 等比例缩放图片 */
+        height: 100%; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    .item_1 {
+        background: #e0e0e0;
+        /* 让图片分别沿Y轴旋转，然后再沿平移，呈六角形散开 */
+        transform: rotate3d(0, 1, 0, 0) translate3d(0, 0, -350px);
+    }
+
+    .item_2 {
+        background: #69b370;
+        transform: rotate3d(0, 1, 0, 60deg) translate3d(0, 0, -350px);
+    }
+
+    .item_3 {
+        background: #e0bd71;
+        transform: rotate3d(0, 1, 0, 120deg) translate3d(0, 0, -350px);
+    }
+
+    .item_4 {
+        background: #b9f0a8;
+        transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, -350px);
+    }
+
+    .item_5 {
+        background: #5a8cbb;
+        transform: rotate3d(0, 1, 0, 240deg) translate3d(0, 0, -350px);
+    }
+
+    .item_6 {
+        background: #b8759a;
+        transform: rotate3d(0, 1, 0, 300deg) translate3d(0, 0, -350px);
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: translate3d(-50%, -50%, 0) rotateX(30deg) rotateY(0);
+        }
+        16.66% {
+            transform: translate3d(-50%, -50%, 0) rotateX(30deg) rotateY(60deg);
+        }
+        33.32% {
+            transform: translate3d(-50%, -50%, 0) rotateX(30deg) rotateY(120deg);
+        }
+        49.98% {
+            transform: translate3d(-50%, -50%, 0) rotateX(30deg) rotateY(180deg);
+        }
+        66.64% {
+            transform: translate3d(-50%, -50%, 0) rotateX(30deg) rotateY(240deg);
+        }
+        83.3% {
+            transform: translate3d(-50%, -50%, 0) rotateX(30deg) rotateY(300deg);
+        }
+        100% {
+            transform: translate3d(-50%, -50%, 0) rotateX(30deg) rotateY(360deg);
+        }
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="item_1">
+            <img src="./p1.png">
+        </div>
+        <div class="item_2">
+            <img src="./p2.png">
+        </div>
+        <div class="item_3">
+            <img src="./p3.png">
+        </div>
+        <div class="item_4">
+            <img src="./p4.png">
+        </div>
+        <div class="item_5">
+            <img src="./p5.png">
+        </div>
+        <div class="item_6">
+            <img src="./p6.png">
+        </div>
+    </div>
+</body>
+
+</html>
